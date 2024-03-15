@@ -1,7 +1,6 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useState } from "react";
 import api from "../config/axios";
-import { useNavigation } from "@react-navigation/native";
+
 import { Auth } from "../types/Auth";
 
 type Props = {

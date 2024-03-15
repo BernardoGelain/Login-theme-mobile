@@ -1,19 +1,22 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
-  padding-bottom: 5px;
-
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
   background-color: ${({ theme }) => theme.colors.primary};
-  height: 55px;
+  height: 200px;
   width: 100%;
 `;
+export const ContainerHeaderInfo = styled.View`
+  flex-direction: row;
+  align-items: start;
+
+  justify-content: space-between;
+
+  background-color: ${({ theme }) => theme.colors.primary};
+`;
 export const Logo = styled.Image`
-  width: 80px;
+  width: 100px;
   height: 50px;
   object-fit: contain;
 `;
@@ -21,7 +24,7 @@ export const Logo = styled.Image`
 export const LogoContainer = styled.View`
   padding-left: 5px;
   padding-right: 5px;
-
+  height: 60px;
   background-color: #ffff;
 
   border-bottom-right-radius: 11px;
@@ -30,8 +33,8 @@ export const LogoContainer = styled.View`
 export const IconContainer = styled.View`
   border-radius: 30px;
   padding: 5px;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   justify-content: center;
   align-items: center;
   background-color: #ffff;
@@ -45,4 +48,5 @@ export const ContainerProfile = styled.Text`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 12px;
 `;

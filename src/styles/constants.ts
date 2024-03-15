@@ -1,14 +1,11 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import styled from "styled-components/native";
 
-export const ContainerHome = styled(SafeAreaView)`
+export const ContainerSAV = styled(SafeAreaView)`
   background-color: ${({ theme }) => theme.colors.background};
   height: 100%;
 `;
 
-export const MenuContainer = styled.View`
-  padding: 15px;
-  margin-top: -100px;
-  justify-content: center;
-  align-items: center;
+export const Text = styled.Text`
+  color: ${({ theme }) => theme.colors.text};
 `;

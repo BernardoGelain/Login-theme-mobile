@@ -31,6 +31,7 @@ export default function BodyModal() {
           )}
         </TouchItem>
       </Item>
+
       <Line />
     </Container>
   );

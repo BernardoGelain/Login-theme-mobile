@@ -1,10 +1,9 @@
-import { useAuth } from "../../hooks/useAuth";
 import Header from "@components/Header/Header";
 import { ContainerHome, MenuContainer } from "./styles";
 import QuickAccess from "@components/QuickAcess/QuickAcess";
+import { Navigate } from "../../types/Navigate";
 
-export default function Home() {
-  const { signOut } = useAuth();
+export default function Home({ navigation: { navigate } }: Navigate) {
   return (
     <ContainerHome>
       <Header />
