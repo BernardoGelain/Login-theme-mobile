@@ -6,16 +6,16 @@ import {
   IconContainer,
   Logo,
   LogoContainer,
-  Username,
 } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
-import { Text, TouchableOpacity, View } from "react-native";
+import { TouchableOpacity } from "react-native";
 import { ModalProfile } from "@components/ModalProfile/ModalProfile";
 import { useState } from "react";
 
 import BodyModal from "@components/Header/BodyModal/Bodymodal";
 import Profile from "./Profile/Profile";
-import { Navigate } from "../../types/Navigate";
+
+import { useLinkTo, useNavigation, useRoute } from "@react-navigation/native";
 
 export default function Header() {
   const { user } = useAuth();
@@ -23,12 +23,26 @@ export default function Header() {
   const toggleSideMenu = () => {
     setMenuOpen(!isSideMenuOpen);
   };
+  const route = useRoute();
+  const currentRouteName = route.name;
+  const navigation = useNavigation();
 
+  const linkTo = useLinkTo();
   return (
     <Container>
       <ContainerHeaderInfo>
+        {currentRouteName !== "home" && (
+          <ContainerProfile>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+              <AntDesign name="back" size={32} color="white" />
+            </TouchableOpacity>
+          </ContainerProfile>
+        )}
+
         <LogoContainer>
-          <Logo source={require("../../assets/logo-fluit.png")} />
+          <TouchableOpacity onPress={() => linkTo("/home")}>
+            <Logo source={require("../../assets/logo-fluit.png")} />
+          </TouchableOpacity>
         </LogoContainer>
         {/* <Entypo name="text-document" size={24} color="black" /> */}
         <ContainerProfile>

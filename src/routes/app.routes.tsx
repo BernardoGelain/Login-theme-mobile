@@ -1,6 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Login from "../pages/Login/Login.";
 import Home from "../pages/Home/Home";
 import ActivitiesPage from "../pages/ActivitiesPage/ActivitiesPage";
 import ContractsPage from "../pages/ContractsPage/ContractsPage";
@@ -8,6 +7,7 @@ import HiredsPage from "../pages/HiredsPage/HiredsPage";
 import MeasurementsPage from "../pages/MeasurementsPage/MeasurementsPage";
 import ProjectsPage from "../pages/ProjectsPage/ProjectsPage";
 import ReportsPage from "../pages/ReportsPage/ReportsPage";
+import ActivityDetails from "../pages/ActivityDetails/ActivityDetails";
 
 type AuthRoutes = {
   signIn: undefined;
@@ -24,10 +24,16 @@ export function AppRoutes() {
           name="home"
           component={Home}
         />
+
         <Stack.Screen
           options={{ headerShown: false }}
           name="activities"
           component={ActivitiesPage}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="activity-details"
+          component={ActivityDetails}
         />
         <Stack.Screen
           options={{ headerShown: false }}

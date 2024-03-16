@@ -1,7 +1,7 @@
 export const defaultTheme = {
   colors: {
     primary: "#8736d6", // Use an orange tone
-    secondary: "#e4bbff", // Light purple from the theme
+    secondary: "#a66fde", // Light purple from the theme
     background: "#eaeaea",
     backgroundMenu: "#FFFFFF",
     borderButtonHeader: "#E3E3E3",

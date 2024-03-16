@@ -6,6 +6,7 @@ export const ContainerSAV = styled(SafeAreaView)`
   height: 100%;
 `;
 
-export const Text = styled.Text`
+export const Text = styled.Text<{ $bold?: string }>`
   color: ${({ theme }) => theme.colors.text};
+  font-weight: ${(props) => props.$bold || "0"};
 `;

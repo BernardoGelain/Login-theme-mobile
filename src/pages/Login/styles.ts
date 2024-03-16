@@ -51,7 +51,7 @@ export const ButtonText = styled.Text`
 `;
 
 export const UnderlineTextContainer = styled.View`
-  width: 140px;
+  width: 150px;
 `;
 export const TextBold = styled.Text<{ $fontSize?: string }>`
   font-weight: bold;

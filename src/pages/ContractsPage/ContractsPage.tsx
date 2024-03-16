@@ -7,9 +7,7 @@ export default function ContractsPage({ navigation: { navigate } }: Navigate) {
   return (
     <ContainerSAV>
       <Header />
-      <TouchableOpacity onPress={() => navigate("home")}>
-        <Text>Voltar</Text>
-      </TouchableOpacity>
+
       <Text>Contratos</Text>
     </ContainerSAV>
   );
