@@ -4,9 +4,10 @@ import { Activity } from "../../types/Activity";
 
 type Props = {
   id: string | number;
+  refresh?: Date;
 };
 
-export const useFetchActivity = ({ id }: Props) => {
+export const useFetchActivity = ({ id, refresh }: Props) => {
   const [activity, setActivity] = useState<Activity>();
   const [isFetching, setIsFetching] = useState(false);
 
@@ -24,7 +25,7 @@ export const useFetchActivity = ({ id }: Props) => {
       .finally(() => {
         setIsFetching(false);
       });
-  }, []);
+  }, [refresh]);
 
   useEffect(() => {
     returnActivity();

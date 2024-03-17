@@ -11,7 +11,6 @@ export const Container = styled.ScrollView<{
   width: 90%;
   margin-left: 5%;
   margin-top: ${(props) => props.$marginTop || "-90px"};
-
   max-height: ${(props) => props.$maxheight || "80%"};
 `;
 export const Scroll = styled.ScrollView<{

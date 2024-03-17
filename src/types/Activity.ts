@@ -1,3 +1,4 @@
+import { Contract } from "./Contract";
 import { SubDiscipline } from "./SubDiscipline";
 
 export interface Activity {
@@ -41,7 +42,7 @@ export interface Activity {
   wp_code: string;
   responsible_name: string | null;
   parent_activity: any; //  o tipo esperado
-  contract: any; //  o tipo esperado
+  contract?: Contract;
   sub_discipline: SubDiscipline;
   measure: any; //  o tipo esperado
   cwp: any; //  o tipo esperado

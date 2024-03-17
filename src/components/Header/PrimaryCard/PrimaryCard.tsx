@@ -14,7 +14,11 @@ export default function PrimaryCard({
   maxheight,
 }: Props) {
   return (
-    <Container $marginTop={marginTop} $maxheight={maxheight}>
+    <Container
+      $marginTop={marginTop}
+      $maxheight={maxheight}
+      keyboardShouldPersistTaps={"never"}
+    >
       <TitleContainer>
         <Title>{title}</Title>
       </TitleContainer>

@@ -11,10 +11,8 @@ import { AntDesign } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
 import { ModalProfile } from "@components/ModalProfile/ModalProfile";
 import { useState } from "react";
-
 import BodyModal from "@components/Header/BodyModal/Bodymodal";
 import Profile from "./Profile/Profile";
-
 import { useLinkTo, useNavigation, useRoute } from "@react-navigation/native";
 
 export default function Header() {
