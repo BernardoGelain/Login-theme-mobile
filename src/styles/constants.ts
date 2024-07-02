@@ -16,6 +16,17 @@ export const TextButton = styled.Text<{ $bold?: string }>`
   font-weight: ${(props) => props.$bold || "600"};
 `;
 
+export const PrimaryButton = styled.TouchableOpacity<{
+  $width?: string | number;
+}>`
+  background-color: ${({ theme }) => theme.colors.primary};
+  width: ${(props) => props.$width || "80px"};
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+`;
+
 export const Input = styled.TextInput`
   text-align-vertical: top;
   border-radius: 5px;
